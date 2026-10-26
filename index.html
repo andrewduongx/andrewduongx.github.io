@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrew Duong | Associate Network Technician</title>
+<meta name="description" content="Andrew Duong, Associate Network Technician in Dallas-Fort Worth. Experience, certifications (CCNA, Network+, A+), skills, and labs.">
+<link rel="preload" href="fonts/ChelseaMarket-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/Schoolbell-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+
+@font-face{font-family:'Chelsea Market';src:url('fonts/ChelseaMarket-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;ascent-override:100.5%;descent-override:26.8%;line-gap-override:0%}
+@font-face{font-family:'Reenie Beanie';src:url('fonts/ReenieBeanie-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;ascent-override:75%;descent-override:25%;line-gap-override:0%}
+@font-face{font-family:'Schoolbell';src:url('fonts/Schoolbell-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;ascent-override:99.5%;descent-override:37.4%;line-gap-override:0%}
+body{margin:0}
+a{color:#2457B8}a:hover{color:#1A2340}
+/* ruled paper: one blue line every 32px. Text outside cards sits on these lines. */
+.paper{background-color:#FFFFFF;background-image:linear-gradient(90deg,transparent 71px,#F2A7A7 71px,#F2A7A7 73px,transparent 73px),repeating-linear-gradient(#FFFFFF 0 31px,#D3E2F5 31px 32px)}
+.paper p,.paper li,.paper ul,.paper h1,.paper h2,.paper h3{margin:0}
+.on{position:relative}
+.hl{background:#FFE873;padding:0 10px;border-radius:4px 10px 6px 12px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.cm{font-family:'Chelsea Market',cursive;font-weight:400}
+.rb{font-family:'Reenie Beanie',cursive}
+.h2{font-family:'Chelsea Market',cursive;font-weight:400;font-size:44px;line-height:64px;position:relative;top:13px}
+.sub{font-family:'Reenie Beanie',cursive;font-size:28px;line-height:32px;color:#2457B8;position:relative;top:6px}
+.tape{position:absolute;top:-14px;left:50%;width:110px;height:30px;margin-left:-55px;background:rgba(190,215,245,0.75);transform:rotate(-3deg)}
+.sticky{padding:32px 22px;box-shadow:0 6px 12px rgba(26,35,64,0.14);min-width:0}
+.sec{padding:32px 0 32px}
+.divwrap{height:64px;display:flex;align-items:center;justify-content:center}
+.pills{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:8px 0}
+.pill{display:inline-flex;align-items:center;box-sizing:border-box;height:48px;padding:0 22px;border:2px solid #1A2340;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;text-decoration:none;font-family:'Chelsea Market',cursive;font-size:18px;color:#1A2340}
+.pill:hover{transform:rotate(-1.5deg)}
+.navl{font-family:'Reenie Beanie',cursive;font-size:26px;line-height:32px;text-decoration:none;color:#1A2340;position:relative;top:6px}
+.navl:hover{color:#2457B8;text-decoration:underline wavy #F2A7A7}
+.row3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 28px}
+.span2{grid-column:span 2}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 36px;align-items:stretch;max-width:840px;margin:0 auto}
+.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 40px;max-width:780px;margin:0 auto}
+.polaroid{position:relative;display:block;width:100%;box-sizing:border-box;height:224px;padding:10px 10px 0;margin:0;border:0;background:#FFFFFF;box-shadow:0 0 0 1px #DCE4EF,0 8px 14px rgba(26,35,64,0.14);cursor:zoom-in;font:inherit;color:#1A2340;text-align:center}
+.polaroid:hover{box-shadow:0 0 0 1px #C9D6E8,0 14px 22px rgba(26,35,64,0.22)}
+.polaroid:focus-visible{outline:3px dashed #2457B8;outline-offset:4px}
+.polaroid img{display:block;width:100%;height:160px;object-fit:cover}
+.polaroid .cap{display:block;height:54px;line-height:54px;font-family:'Reenie Beanie',cursive;font-size:26px;color:#2457B8}
+.lb{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
+.lb-bg{position:absolute;inset:0;width:100%;height:100%;border:0;margin:0;padding:0;background:rgba(26,35,64,0.82);cursor:zoom-out}
+.lb-fig{position:relative;margin:0;background:#FFFFFF;padding:14px 14px 0;box-shadow:0 20px 50px rgba(0,0,0,0.35);max-width:min(1100px,92vw);transform:rotate(-0.6deg)}
+.lb-fig img{display:block;max-width:100%;max-height:76vh;width:auto;height:auto;margin:0 auto}
+.lb-fig figcaption{font-family:'Reenie Beanie',cursive;font-size:32px;line-height:60px;text-align:center;color:#2457B8}
+.lb-x{position:absolute;top:-18px;right:-18px;width:44px;height:44px;border-radius:50%;border:2px solid #1A2340;background:#FFE873;color:#1A2340;font-family:'Chelsea Market',cursive;font-size:22px;line-height:40px;cursor:pointer}
+.lb-x:focus-visible{outline:3px dashed #FFFFFF;outline-offset:3px}
+.pkt{position:absolute;top:50%;left:-50px;margin-top:-14px;animation:pktTravel 14s linear infinite}
+.bob{display:block;animation:pktBob 1.8s ease-in-out infinite alternate}
+.p2{animation-delay:-3.5s}.p3{animation-delay:-7s}.p4{animation-delay:-10.5s}
+.b2{animation-delay:-0.5s}.b3{animation-delay:-1s}.b4{animation-delay:-1.4s}
+@keyframes pktTravel{from{left:-50px}to{left:calc(100% + 10px)}}
+@keyframes pktBob{from{transform:translateY(-4px) rotate(-4deg)}to{transform:translateY(4px) rotate(4deg)}}
+a:focus-visible{outline:3px dashed #2457B8;outline-offset:4px}
+@media (prefers-reduced-motion:reduce){.pkt,.bob{animation:none}}
+@media (max-width:860px){
+.row3,.row2{grid-template-columns:minmax(0,1fr)}
+.photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
+.span2{grid-column:auto}
+.paper{background-image:repeating-linear-gradient(#FFFFFF 0 31px,#D3E2F5 31px 32px) !important}
+.pad{padding:32px 22px 64px !important}
+.tilt{transform:none !important}
+.topnav{display:none !important}
+.h1{font-size:44px !important;line-height:64px !important;top:13px !important}
+.h2{font-size:34px;top:16px}
+}
+
+.lb[hidden]{display:none}
+body.lb-open{overflow:hidden}
+
+</style>
+</head>
+<body>
+
+<div style="background: #DCE8F7; color: #1A2340; font-family: 'Schoolbell', cursive; font-size: 20px; line-height: 32px; min-height: 100vh; padding: 36px 14px 56px; box-sizing: border-box; overflow-x: clip">
+<div class="paper pad" style="max-width: 1100px; margin: 0 auto; border-radius: 6px; box-shadow: 0 14px 30px rgba(26,35,64,0.18); padding: 32px 56px 64px 112px">
+
+<header style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0 12px; flex-wrap: wrap; min-height: 32px">
+<a href="#top" class="cm on" style="font-size: 21px; line-height: 32px; top: 5px; color: #1A2340; text-decoration: none">Andrew's Page</a>
+<nav class="topnav" aria-label="Sections" style="display: flex; gap: 0 22px; flex-wrap: wrap">
+<a class="navl" href="#experience">experience</a>
+<a class="navl" href="#certs">certs</a>
+<a class="navl" href="#skills">skills</a>
+<a class="navl" href="#projects">projects</a>
+<a class="navl" href="#contact">contact</a>
+</nav>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<div id="top" style="padding: 96px 0 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px 56px">
+<div style="flex: 999 1 460px; min-width: 0">
+<p class="rb on" style="font-size: 32px; line-height: 32px; top: 5px; color: #2457B8">hey there!</p>
+<h1 class="cm on h1" style="font-size: 80px; line-height: 96px; top: 16px">I'm Andrew</h1>
+<p class="on" style="margin-top: 32px; max-width: 30em; font-size: 22px; line-height: 32px; top: 6px">I'm an Associate Network Technician in DFW.&nbsp;<br>I have a real passion for networking and love learning how it all works.</p>
+<div class="pills" style="margin-top: 32px">
+<a class="pill" href="https://www.linkedin.com/in/andrewduongx/" style="background: #FFE873">Connect on LinkedIn</a>
+</div>
+</div>
+<div style="flex: 0 1 280px; position: relative; margin-top: 32px">
+<svg class="topnav" viewBox="0 0 120 70" width="120" height="70" fill="none" stroke="#2457B8" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" style="position: absolute; left: -116px; top: 10px"><path d="M4 50 C 30 10, 70 6, 108 30"></path><path d="M96 20 L 109 31 L 94 38"></path></svg>
+<div class="sticky tilt" style="background: #FFF3A6; transform: rotate(3deg)">
+<p class="rb" style="font-size: 30px; line-height: 32px; color: #2457B8">currently:</p>
+<p>Associate Network Technician at FCCI Group, since February 2026</p>
+</div>
+</div>
+</div>
+
+<!-- doodled cable with envelopes -->
+<div aria-hidden="true" style="position: relative; height: 96px; margin-top: 64px; overflow: hidden">
+<svg viewBox="0 0 1000 40" preserveAspectRatio="none" width="100%" height="40" style="position: absolute; left: 0; top: 28px"><path d="M0 20 C 120 6, 220 34, 340 20 S 580 6, 700 20 S 900 34, 1000 18" fill="none" stroke="#9FB7DA" stroke-width="2.5" stroke-dasharray="10 8" vector-effect="non-scaling-stroke"></path></svg>
+<span class="pkt"><span class="bob"><svg viewBox="0 0 44 30" width="40" height="28" fill="none" stroke="#1A2340" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M2 3 Q 22 1 42 3 Q 43 15 42 28 Q 22 29 2 28 Q 1 15 2 3 Z" fill="#FFFFFF"></path><path d="M3 4 L22 17 L41 4"></path></svg></span></span>
+<span class="pkt p2"><span class="bob b2"><svg viewBox="0 0 44 30" width="40" height="28" fill="none" stroke="#1A2340" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M2 3 Q 22 1 42 3 Q 43 15 42 28 Q 22 29 2 28 Q 1 15 2 3 Z" fill="#FFD6E0"></path><path d="M3 4 L22 17 L41 4"></path></svg></span></span>
+<span class="pkt p3"><span class="bob b3"><svg viewBox="0 0 44 30" width="40" height="28" fill="none" stroke="#1A2340" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M2 3 Q 22 1 42 3 Q 43 15 42 28 Q 22 29 2 28 Q 1 15 2 3 Z" fill="#FFFFFF"></path><path d="M3 4 L22 17 L41 4"></path></svg></span></span>
+<span class="pkt p4"><span class="bob b4"><svg viewBox="0 0 44 30" width="40" height="28" fill="none" stroke="#1A2340" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M2 3 Q 22 1 42 3 Q 43 15 42 28 Q 22 29 2 28 Q 1 15 2 3 Z" fill="#FFF3A6"></path><path d="M3 4 L22 17 L41 4"></path></svg></span></span>
+</div>
+</div>
+
+<div class="divwrap" aria-hidden="true"><svg viewBox="0 0 180 24" width="180" height="24" fill="none" stroke="#F2A7A7" stroke-width="3" stroke-linecap="round"><path d="M4 12 q 11 -10 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0"></path></svg></div>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="sec">
+<h2 class="h2"><span class="hl">Experience</span></h2>
+<p class="sub" style="margin-bottom: 32px">what I do all day</p>
+<div class="tilt" style="position: relative; background: #FFFFFF; padding: 32px 40px; box-shadow: 0 0 0 1px #C9D6E8, 0 8px 16px rgba(26,35,64,0.1); transform: rotate(-0.6deg)">
+<span class="tape" aria-hidden="true"></span>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0 20px; flex-wrap: wrap">
+<h3 class="cm" style="font-size: 30px; line-height: 32px">Associate Network Technician</h3>
+<span style="color: #4B587A">Feb 2026 to now</span>
+</div>
+<p style="margin-bottom: 32px; color: #4B587A">FCCI Insurance Group · Richardson, TX</p>
+<ul style="padding-left: 1.2em; max-width: 46em">
+<li>Deliver Tier 1 and Tier 2 desktop, application, hardware, software, and VPN support for a large remote workforce, and serve as primary on-site IT support for the Richardson office and executive staff.</li>
+<li>Support onboarding and offboarding by imaging and configuring laptops for new hires, and handle decommissioning and asset retrieval for departing users.</li>
+<li>Work with network engineers to troubleshoot network switches and infrastructure equipment.</li>
+<li>Maintain and update technical documentation in the EasyVista ticketing system.</li>
+<li>Manage inventory and asset tracking in Redbeam.</li>
+</ul>
+</div>
+<div class="tilt" style="position: relative; background: #FFFFFF; padding: 32px 40px; box-shadow: 0 0 0 1px #C9D6E8, 0 8px 16px rgba(26,35,64,0.1); transform: rotate(0.5deg); margin-top: 64px">
+<span class="tape" aria-hidden="true" style="background: rgba(255,214,224,0.8)"></span>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0 20px; flex-wrap: wrap">
+<h3 class="cm" style="font-size: 30px; line-height: 32px">IT Helpdesk Specialist</h3>
+<span style="color: #4B587A">May 2025 to Jan 2026</span>
+</div>
+<p style="margin-bottom: 32px; color: #4B587A">Tyler Technologies · Plano, TX</p>
+<ul style="padding-left: 1.2em; max-width: 46em">
+<li>Troubleshoot and resolve network connectivity issues for end users, including wired and wireless access, DNS problems, and VPN configuration errors.</li>
+<li>Provided remote and on-site technical support to 8,000+ end users across departments, using Jira and secure remote tools to diagnose and resolve issues.</li>
+<li>Administered Active Directory to onboard and offboard users, manage access, reset passwords, and recover accounts.</li>
+</ul>
+</div>
+<p class="rb on" style="margin-top: 32px; text-align: right; font-size: 28px; line-height: 32px; top: 6px; color: #2457B8">Almost 2 years in IT !</p>
+</section>
+
+<div class="divwrap" aria-hidden="true"><svg viewBox="0 0 180 24" width="180" height="24" fill="none" stroke="#F2A7A7" stroke-width="3" stroke-linecap="round"><path d="M4 12 q 11 -10 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0"></path></svg></div>
+
+<!-- ============ CERTS + EDUCATION ============ -->
+<section id="certs" class="sec">
+<h2 class="h2" style="margin-bottom: 32px"><span class="hl">Certs I've earned</span></h2>
+<div class="row3">
+<div class="sticky tilt" style="background: #FFD6E0; transform: rotate(-2.5deg)">
+<p class="cm" style="font-size: 30px; line-height: 32px">CCNA</p>
+<p style="color: #4B587A">Cisco · 2026</p>
+<p>Routing, switching, and network fundamentals. My newest one!</p>
+</div>
+<div class="sticky tilt" style="background: #D6ECFF; transform: rotate(1.5deg)">
+<p class="cm" style="font-size: 30px; line-height: 32px">Network+</p>
+<p style="color: #4B587A">CompTIA · 2025</p>
+<p>Networking concepts, infrastructure, and operations.</p>
+</div>
+<div class="sticky tilt" style="background: #DDF5D8; transform: rotate(-1deg)">
+<p class="cm" style="font-size: 30px; line-height: 32px">A+</p>
+<p style="color: #4B587A">CompTIA · 2025</p>
+<p>Hardware, operating systems, and troubleshooting.</p>
+</div>
+</div>
+
+<div class="tilt" style="margin: 64px auto 0; max-width: 620px; outline: 2px dashed #1A2340; outline-offset: -2px; border-radius: 12px; padding: 32px 28px; background: #FFFFFF; transform: rotate(0.8deg); display: flex; gap: 0 20px; align-items: center; flex-wrap: wrap">
+<svg viewBox="0 0 64 48" width="64" height="48" fill="none" stroke="#1A2340" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M4 18 L32 6 L60 18 L32 30 Z" fill="#D6ECFF"></path><path d="M14 23 v12 c 8 6 28 6 36 0 v-12"></path><path d="M60 18 v14"></path></svg>
+<div>
+<h3 class="cm" style="font-size: 26px; line-height: 32px">Education</h3>
+<p>Dallas College</p>
+<p>A.A.S., Network Administration and Support</p>
+</div>
+</div>
+</section>
+
+<div class="divwrap" aria-hidden="true"><svg viewBox="0 0 180 24" width="180" height="24" fill="none" stroke="#F2A7A7" stroke-width="3" stroke-linecap="round"><path d="M4 12 q 11 -10 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0"></path></svg></div>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="sec">
+<h2 class="h2" style="margin-bottom: 32px"><span class="hl">Skills</span></h2>
+<div class="row3">
+<div>
+<h3 class="cm on" style="font-size: 24px; line-height: 32px; top: 0px">Networking</h3>
+<ul class="on" style="list-style: none; padding: 0; top: 3px">
+<li>OSI model</li>
+<li>TCP/IP</li>
+<li>DNS and DHCP</li>
+<li>VLANs</li>
+<li>Subnetting</li>
+<li>OSPF</li>
+</ul>
+</div>
+<div>
+<h3 class="cm on" style="font-size: 24px; line-height: 32px; top: 0px">Identity and access</h3>
+<ul class="on" style="list-style: none; padding: 0; top: 3px">
+<li>Active Directory</li>
+<li>Microsoft Entra ID / Azure</li>
+<li>SSO</li>
+<li>MFA</li>
+<li>Microsoft 365 support</li>
+</ul>
+</div>
+<div>
+<h3 class="cm on" style="font-size: 24px; line-height: 32px; top: 0px">Device troubleshooting</h3>
+<ul class="on" style="list-style: none; padding: 0; top: 3px">
+<li>Windows</li>
+<li>macOS</li>
+<li>iOS</li>
+<li>Android</li>
+<li>Hardware and software</li>
+</ul>
+</div>
+<div>
+<h3 class="cm on" style="font-size: 24px; line-height: 32px; top: 0px">Issue Tracking&nbsp;</h3>
+<ul class="on" style="list-style: none; padding: 0; top: 3px">
+<li>Jira</li>
+<li>Confluence</li>
+<li>EasyVista</li>
+</ul>
+</div>
+<div class="span2" style="text-align: center">
+<h3 class="cm on" style="font-size: 24px; line-height: 32px; top: 0px">Support and security tools</h3>
+<ul class="on" style="list-style: none; padding: 0; top: 3px; display: grid; grid-template-columns: repeat(2, auto); grid-template-rows: repeat(3, 32px); grid-auto-flow: column; justify-content: center; column-gap: 72px">
+<li>Bomgar</li>
+<li>Okta</li>
+<li>CrowdStrike</li>
+<li>Netskope</li>
+<li>SentinelOne</li>
+<li>DameWare</li>
+</ul>
+</div>
+</div>
+</section>
+
+<div class="divwrap" aria-hidden="true"><svg viewBox="0 0 180 24" width="180" height="24" fill="none" stroke="#F2A7A7" stroke-width="3" stroke-linecap="round"><path d="M4 12 q 11 -10 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0"></path></svg></div>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="sec">
+<h2 class="h2"><span class="hl">Projects</span></h2>
+<p class="sub" style="margin-bottom: 32px">labs I do on my free time!</p>
+<div class="row2">
+<div class="tilt" style="min-width: 0; position: relative; background: #FFFFFF; padding: 32px; box-shadow: 0 0 0 1px #C9D6E8, 0 8px 16px rgba(26,35,64,0.1); transform: rotate(0.6deg)">
+<span class="tape" aria-hidden="true" style="background: rgba(255,214,224,0.8)"></span>
+<h3 class="cm" style="font-size: 28px; line-height: 32px; margin-bottom: 32px; text-align: center">Packet Tracer Labs</h3>
+<p>Hands-on Packet Tracer labs covering VLANs, trunking, inter-VLAN routing, OSPF, STP, NAT, DHCP, and ACLs.&nbsp;</p>
+<svg viewBox="0 0 320 96" width="320" height="96" fill="none" stroke="#1A2340" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Doodle of a router connected to two switches on VLAN 10 and VLAN 20" style="display: block; max-width: 100%; margin: 32px auto 0">
+<rect x="128" y="8" width="64" height="26" rx="7" fill="#D6ECFF"></rect><path d="M144 21 h32"></path>
+<rect x="30" y="62" width="72" height="24" rx="5" fill="#FFFFFF"></rect><rect x="218" y="62" width="72" height="24" rx="5" fill="#FFFFFF"></rect>
+<path d="M138 34 L 72 62" stroke-dasharray="5 5"></path><path d="M182 34 L 250 62" stroke-dasharray="5 5"></path>
+<text x="66" y="79" text-anchor="middle" font-family="Schoolbell, cursive" font-size="13" fill="#1A2340" stroke="none">VLAN 10</text>
+<text x="254" y="79" text-anchor="middle" font-family="Schoolbell, cursive" font-size="13" fill="#1A2340" stroke="none">VLAN 20</text>
+</svg>
+</div>
+<div class="tilt" style="min-width: 0; outline: 2px dashed #9FB7DA; outline-offset: -2px; border-radius: 10px; padding: 32px 22px; text-align: center; transform: rotate(-1.5deg); background: rgba(255,255,255,0.7); display: flex; flex-direction: column; justify-content: center">
+<p class="rb" style="font-size: 34px; line-height: 32px; color: #2457B8">next lab goes here...</p>
+<p style="font-size: 17px; color: #4B587A">more projects coming soon</p>
+</div>
+</div>
+</section>
+<div class="divwrap" aria-hidden="true"><svg viewBox="0 0 180 24" width="180" height="24" fill="none" stroke="#F2A7A7" stroke-width="3" stroke-linecap="round"><path d="M4 12 q 11 -10 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0"></path></svg></div>
+
+<!-- ============ SIDE QUESTS ============ -->
+<section id="sidequests" class="sec">
+<h2 class="h2"><span class="hl">Side quests</span></h2>
+<p class="sub" style="margin-bottom: 32px">photos of my travels and my furry friend</p>
+<div class="photos">
+<button type="button" class="polaroid tilt" data-src="images/beach.jpg" data-cap="nha trang" data-alt="Aerial view of a beach with white umbrellas and turquoise water" aria-label="Open photo: Aerial view of a beach with white umbrellas and turquoise water" style="transform: rotate(-2deg)">
+<span class="tape" aria-hidden="true" style="background: rgba(190,215,245,0.8); width: 84px; margin-left: -42px; height: 26px; top: -12px"></span>
+<img src="images/beach.jpg" alt="Aerial view of a beach with white umbrellas and turquoise water" loading="lazy">
+<span class="cap">nha trang</span>
+</button>
+<button type="button" class="polaroid tilt" data-src="images/road.jpg" data-cap="utah" data-alt="Highway leading toward snowy mountains" aria-label="Open photo: Highway leading toward snowy mountains" style="transform: rotate(1.5deg)">
+<span class="tape" aria-hidden="true" style="background: rgba(255,214,224,0.85); width: 84px; margin-left: -42px; height: 26px; top: -12px"></span>
+<img src="images/road.jpg" alt="Highway leading toward snowy mountains" loading="lazy">
+<span class="cap">utah</span>
+</button>
+<button type="button" class="polaroid tilt" data-src="images/canyon.jpg" data-cap="zion national park" data-alt="Red rock canyon overlook with people taking photos" aria-label="Open photo: Red rock canyon overlook with people taking photos" style="transform: rotate(-1deg)">
+<span class="tape" aria-hidden="true" style="background: rgba(190,215,245,0.8); width: 84px; margin-left: -42px; height: 26px; top: -12px"></span>
+<img src="images/canyon.jpg" alt="Red rock canyon overlook with people taking photos" loading="lazy">
+<span class="cap">zion national park</span>
+</button>
+<button type="button" class="polaroid tilt" data-src="images/lake.jpg" data-cap="trillium lake" data-alt="Mountain lake with a snowy peak and pine trees" aria-label="Open photo: Mountain lake with a snowy peak and pine trees" style="transform: rotate(2deg)">
+<span class="tape" aria-hidden="true" style="background: rgba(255,214,224,0.85); width: 84px; margin-left: -42px; height: 26px; top: -12px"></span>
+<img src="images/lake.jpg" alt="Mountain lake with a snowy peak and pine trees" loading="lazy">
+<span class="cap">trillium lake</span>
+</button>
+<button type="button" class="polaroid tilt" data-src="images/dog.jpg" data-cap="deedee" data-alt="A small black dog resting on a lap" aria-label="Open photo: A small black dog resting on a lap" style="transform: rotate(-1.5deg)">
+<span class="tape" aria-hidden="true" style="background: rgba(190,215,245,0.8); width: 84px; margin-left: -42px; height: 26px; top: -12px"></span>
+<img src="images/dog.jpg" alt="A small black dog resting on a lap" loading="lazy">
+<span class="cap">deedee</span>
+</button>
+<button type="button" class="polaroid tilt" data-src="images/snow.jpg" data-cap="hiking wheelers peak" data-alt="Hikers in deep snow below a mountain ridge" aria-label="Open photo: Hikers in deep snow below a mountain ridge" style="transform: rotate(1deg)">
+<span class="tape" aria-hidden="true" style="background: rgba(255,214,224,0.85); width: 84px; margin-left: -42px; height: 26px; top: -12px"></span>
+<img src="images/snow.jpg" alt="Hikers in deep snow below a mountain ridge" loading="lazy">
+<span class="cap">hiking wheelers peak</span>
+</button>
+
+</div>
+</section>
+<div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+<button type="button" class="lb-bg" data-close aria-label="Close photo"></button>
+<figure class="lb-fig">
+<img id="lb-img" src="" alt="">
+<figcaption id="lb-cap"></figcaption>
+<button type="button" class="lb-x" data-close aria-label="Close photo">x</button>
+</figure>
+</div>
+
+<div class="divwrap" aria-hidden="true"><svg viewBox="0 0 180 24" width="180" height="24" fill="none" stroke="#F2A7A7" stroke-width="3" stroke-linecap="round"><path d="M4 12 q 11 -10 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0 t 22 0"></path></svg></div><section id="contact" class="sec" style="text-align: center">
+<svg viewBox="0 0 128 96" width="128" height="96" fill="none" stroke="#1A2340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: block; margin: 0 auto"><rect x="20" y="8" width="88" height="62" rx="7" fill="#FFFFFF"></rect><rect x="28" y="16" width="72" height="46" rx="3" fill="#E8F0FC" stroke-width="2"></rect><path d="M44 30 L54 39 L44 48"></path><path d="M60 49 H78"></path><path d="M8 76 H120 L112 88 H16 Z" fill="#D6ECFF"></path><path d="M54 82 H74" stroke-width="2"></path></svg>
+<h2 class="h2" style="margin-top: 32px">Ping me, and I'll reply</h2>
+<p class="on" style="margin: 32px auto 0; max-width: 26em; top: 3px">Want to collaborate, or just say hello? I'd love to hear from you.</p>
+<div class="pills" style="margin-top: 32px; justify-content: center">
+<a class="pill" href="mailto:you@example.com" style="background: #FFD6E0; min-width: 170px; justify-content: center">Email me</a>
+<a class="pill" href="https://www.linkedin.com/in/andrewduongx/" style="background: #FFE873; min-width: 170px; justify-content: center">LinkedIn</a>
+</div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+
+</main>
+
+<footer style="margin-top: 64px; display: flex; justify-content: space-between; align-items: flex-start; gap: 0 8px; flex-wrap: wrap; color: #4B587A"><span class="on" style="font-size: 17px; line-height: 32px; top: 8px">© 2026 Andrew Duong</span><span class="rb on" style="font-size: 26px; line-height: 32px; top: 6px; color: rgb(36, 87, 184)"><br></span></footer>
+</div>
+</div>
+
+<script>
+(function(){
+var lb=document.getElementById('lightbox'),img=document.getElementById('lb-img'),cap=document.getElementById('lb-cap'),last=null;
+function open(btn){last=btn;img.src=btn.dataset.src;img.alt=btn.dataset.alt;cap.textContent=btn.dataset.cap;lb.hidden=false;document.body.classList.add('lb-open');lb.querySelector('.lb-x').focus();}
+function close(){lb.hidden=true;document.body.classList.remove('lb-open');if(last)last.focus();}
+document.querySelectorAll('.polaroid').forEach(function(b){b.addEventListener('click',function(){open(b);});});
+lb.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',close);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close();});
+})();
+</script>
+</body>
+</html>
