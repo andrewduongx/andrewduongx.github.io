@@ -40,6 +40,9 @@ a{color:#2457B8}a:hover{color:#1A2340}
 .tape{position:absolute;top:-14px;left:50%;width:110px;height:30px;margin-left:-55px;background:rgba(190,215,245,0.75);transform:rotate(-3deg)}
 .sticky{padding:32px 22px;box-shadow:0 6px 12px rgba(26,35,64,0.14);min-width:0}
 .sec{padding:32px 0 32px}
+.me{box-sizing:border-box;width:160px;height:160px;padding:7px;background:#FFFFFF;border:2px solid #1A2340;box-shadow:0 6px 12px rgba(26,35,64,0.14);flex:0 0 auto}
+.me img{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none;-webkit-user-drag:none}
+
 .cert{display:block;text-decoration:none;color:#1A2340;transition:box-shadow .15s}
 .cert:hover{box-shadow:0 10px 18px rgba(26,35,64,0.22)}
 .cert .badge{font-family:'Reenie Beanie',cursive;font-size:24px;color:#2457B8;text-decoration:underline;text-decoration-color:#9FB7DA;text-underline-offset:4px}
@@ -83,6 +86,9 @@ a:focus-visible{outline:3px dashed #2457B8;outline-offset:4px}
 .tilt{transform:none !important}
 .topnav{display:none !important}
 .sitenav{width:100%;gap:0 18px !important}
+.me-group{flex-wrap:wrap;gap:32px !important;width:100%}
+.me-note{width:100% !important}
+.h1{white-space:normal !important}
 .edu-ico{height:64px}
 .polaroid .cap{display:flex;align-items:center;justify-content:center;padding:0 4px;font-size:21px;line-height:22px}
 .h1{font-size:44px !important;line-height:64px !important;top:13px !important}
@@ -114,17 +120,19 @@ body.lb-open{overflow:hidden}
 <main>
 <!-- ============ HERO ============ -->
 <div id="top" style="padding: 96px 0 32px">
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px 56px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px 40px">
 <div style="flex: 999 1 460px; min-width: 0">
 <p class="rb on" style="font-size: 32px; line-height: 32px; top: 5px; color: #2457B8">hey there!</p>
-<h1 class="cm on h1" style="font-size: 80px; line-height: 96px; top: 16px">I'm Andrew</h1>
+<h1 class="cm on h1" style="font-size: 80px; line-height: 96px; top: 16px; white-space: nowrap">I'm Andrew</h1>
 <p class="on" style="margin-top: 32px; max-width: 30em; font-size: 22px; line-height: 32px; top: 6px">I'm an Associate Network Technician in DFW.&nbsp;<br>I have a real passion for networking and love learning how it all works.</p>
 <div class="pills" style="margin-top: 32px">
 <a class="pill" href="https://www.linkedin.com/in/andrewduongx/" style="background: #FFE873">Connect on LinkedIn</a>
 </div>
 </div>
-<div style="flex: 0 1 280px; position: relative; margin-top: 32px">
-<svg class="topnav" viewBox="0 0 120 70" width="120" height="70" fill="none" stroke="#2457B8" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" style="position: absolute; left: -116px; top: 10px"><path d="M4 50 C 30 10, 70 6, 108 30"></path><path d="M96 20 L 109 31 L 94 38"></path></svg>
+<div class="me-group" style="flex: 0 0 auto; display: flex; align-items: flex-start; gap: 0 56px; margin-top: 32px; position: relative">
+<div class="me tilt" style="transform: rotate(-2deg)"><img src="images/me.jpg" alt="Photo of Andrew Duong" draggable="false"></div>
+<svg class="topnav" viewBox="0 0 120 70" width="50" height="30" fill="none" stroke="#2457B8" stroke-width="3" stroke-linecap="round" aria-hidden="true" style="position: absolute; left: 164px; top: 56px"><path d="M4 50 C 30 10, 70 6, 108 30"></path><path d="M96 20 L 109 31 L 94 38"></path></svg>
+<div class="me-note" style="width: 230px">
 <div class="sticky tilt" style="background: #FFF3A6; transform: rotate(3deg)">
 <p class="rb" style="font-size: 30px; line-height: 32px; color: #2457B8">currently:</p>
 <p>Associate Network Technician at FCCI Insurance Group, since February 2026</p>
